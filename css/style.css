@@ -4,14 +4,20 @@ body {
   padding: 0;
 }
 
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
 /* Header layout */
 .site-top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  max-width: 80%;
   margin: 0 auto;
+  width: 80%;
 }
 
 /* Branding */
@@ -42,4 +48,29 @@ body {
   text-transform: uppercase;
   font-size: 1.125rem;
   font-weight: 600;
+}
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d1d1d;
+  color: #f5f5f5;
+  font-size: 0.875rem;
+  margin: auto auto 0 auto;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+
+.footer-title {
+  margin-top: 0.875rem;
+}
+
+.social-icon {
+  margin-top: 0.875rem;
+  width: 1.5rem;
+  height: auto;
+  display: block;
+  fill: white;
 }
