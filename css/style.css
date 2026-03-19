@@ -12,6 +12,11 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  font-family:
+    "Source Sans 3", "Source Sans Pro", system-ui, "Segoe UI", Roboto,
+    sans-serif;
+  color: rgb(14, 14, 14, 1);
+  background-color: rgb(255, 255, 255, 1);
 }
 
 h1 {
@@ -23,16 +28,17 @@ h1 {
 .site-top-bar {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-self: space-between;
+  width: 100%;
   gap: 0.5rem;
-  padding-top: 0.25rem;
-  padding-left: 0.25rem;
+  padding: 1rem 1.25rem;
 }
 
 /* Branding */
 .site-branding-title {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
 }
 
@@ -41,9 +47,22 @@ h1 {
   height: auto;
 }
 
+.brand-title {
+  font-size: clamp(1rem, 4vw, 2rem);
+  font-weight: 700;
+  text-decoration: none;
+}
+
 /* Navigation */
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .nav-bar-list {
   display: flex;
+  justify-content: center;
   gap: 1rem;
   list-style: none;
   margin: 0;
@@ -55,7 +74,7 @@ h1 {
   display: block;
   padding: 0.5rem;
   text-transform: uppercase;
-  font-size: 1.125rem;
+  font-size: clamp(0.875rem, 3vw, 1.25rem);
   font-weight: 600;
 }
 
@@ -64,8 +83,8 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #1d1d1d;
-  color: #f5f5f5;
+  background-color: rgb(32, 32, 32, 1);
+  color: rgb(255, 255, 255, 1);
   font-size: 0.875rem;
   padding: 0.5rem 0;
   width: 100%;
@@ -80,15 +99,15 @@ h1 {
   width: 1.5rem;
   height: auto;
   display: block;
-  fill: white;
+  fill: rgb(255, 255, 255, 1);
 }
 
 @media (min-width: 414px) {
   .site-top-bar {
     flex-direction: row;
     justify-content: space-between;
-    width: 80%;
     margin-inline: auto;
+    max-width: 1085px;
   }
 }
 
