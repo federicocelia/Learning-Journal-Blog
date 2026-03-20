@@ -152,7 +152,7 @@ h1 {
   align-items: flex-end;
   aspect-ratio: 414 / 293;
   color: rgb(255, 255, 255, 1);
-  margin-bottom: 1rem;
+  margin-bottom: 2.125rem;
   margin-inline: -1.25rem;
   padding: 1.25rem;
   position: relative;
@@ -185,6 +185,7 @@ h1 {
   height: 100%;
   object-fit: cover;
   width: 100%;
+  display: block;
 }
 
 /* ==================================================
@@ -213,12 +214,15 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
     margin-inline: auto;
-    max-width: 80%;
-    padding-inline: 0;
+    padding-inline: 1.25rem;
   }
 }
 
 @media (min-width: 1086px) {
+  .site-top-bar {
+    max-width: 80%;
+  }
+
   .post-img-wrapper {
     aspect-ratio: 309 / 232;
     max-width: 309px;
@@ -236,5 +240,19 @@ h1 {
   .posts-container {
     max-width: 80%;
     margin: 0 auto;
+  }
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(414px, 1fr));
+  gap: 2.5625rem;
+}
+
+@media (min-width: 414px) {
+  .posts-grid {
+    grid-template-columns: repeat(auto-fit, minmax(309px, 1fr));
+    row-gap: 2.875rem;
+    column-gap: 1.625rem;
   }
 }
