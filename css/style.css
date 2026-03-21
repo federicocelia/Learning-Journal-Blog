@@ -32,6 +32,12 @@ main {
   padding-top: 0;
 }
 
+.posts-grid {
+  display: grid;
+  gap: 2.5625rem;
+  grid-template-columns: repeat(auto-fit, minmax(414px, 1fr));
+}
+
 /* ==================================================
    Typography
    ================================================== */
@@ -62,10 +68,8 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-
   padding-block: clamp(1rem, 5vw, 1.25rem);
   padding-inline: 1.25rem;
-
   width: 100%;
 }
 
@@ -148,10 +152,10 @@ h1 {
    ================================================== */
 
 .latest-post-section {
-  display: flex;
   align-items: flex-end;
   aspect-ratio: 414 / 293;
   color: rgb(255, 255, 255, 1);
+  display: flex;
   margin-bottom: 2.125rem;
   margin-inline: -1.25rem;
   padding: 1.25rem;
@@ -182,10 +186,10 @@ h1 {
 }
 
 .post-img {
+  display: block;
   height: 100%;
   object-fit: cover;
   width: 100%;
-  display: block;
 }
 
 /* ==================================================
@@ -216,6 +220,12 @@ h1 {
     margin-inline: auto;
     padding-inline: 1.25rem;
   }
+
+  .posts-grid {
+    column-gap: 1.625rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 309px), 1fr));
+    row-gap: 2.875rem;
+  }
 }
 
 @media (min-width: 1086px) {
@@ -227,9 +237,10 @@ h1 {
     aspect-ratio: 309 / 232;
     max-width: 309px;
   }
+
   .latest-post-content {
-    width: 80%;
     margin: 0 auto;
+    width: 80%;
   }
 
   .latest-post-section {
@@ -238,21 +249,8 @@ h1 {
   }
 
   .posts-container {
-    max-width: 80%;
     margin: 0 auto;
-  }
-}
-
-.posts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(414px, 1fr));
-  gap: 2.5625rem;
-}
-
-@media (min-width: 414px) {
-  .posts-grid {
-    grid-template-columns: repeat(auto-fit, minmax(309px, 1fr));
-    row-gap: 2.875rem;
-    column-gap: 1.625rem;
+    min-width: 980px; /* 3 columns threshold */
+    width: 80%;
   }
 }

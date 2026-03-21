@@ -1,0 +1,93 @@
+/* ==================================================
+   About hero layout
+   ================================================== */
+
+.about-hero {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: clamp(3.125rem, 4.5vw, 4.0625rem);
+  margin-top: clamp(1.625rem, 4.5vw, 5.6875rem);
+}
+
+/* ==================================================
+   Author image
+   ================================================== */
+
+.author-img {
+  background-image: url(../images/futuristic-background.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  filter: drop-shadow(2px 0 0 rgb(188, 28, 234))
+    drop-shadow(-2px 0 0 rgb(188, 28, 234))
+    drop-shadow(0 2px 0 rgb(188, 28, 234))
+    drop-shadow(0 -2px 0 rgb(188, 28, 234));
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.author-img-wrapper {
+  width: clamp(12rem, 20vw, 17rem);
+}
+
+/* ==================================================
+   About hero text
+   ================================================== */
+
+.about-hero-heading {
+  margin-bottom: 0;
+  margin-top: clamp(1.625rem, 4.5vw, 4.125rem);
+}
+
+.about-hero-subheading {
+  margin-bottom: 0;
+  margin-top: max(
+    0.625rem,
+    1.5rem - 2vw
+  ); /* bigger on small screens, smaller on large, min 0.625rem */
+}
+
+/* ==================================================
+   About article typography
+   ================================================== */
+
+.about-article-headings {
+  margin-top: 0;
+}
+
+.about-text {
+  margin-top: 0;
+}
+
+.about-text,
+.about-hero-subheading {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* ==================================================
+   Desktop layout adjustments
+   ================================================== */
+
+@media (min-width: 1086px) {
+  .about-hero {
+    align-items: center;
+    column-gap: clamp(2.0625rem, 4.5vw, 3.75rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .about-hero-heading {
+    margin-top: 0;
+  }
+
+  .about-section {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .about-article {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
