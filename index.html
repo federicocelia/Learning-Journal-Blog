@@ -46,7 +46,7 @@
     />
     <!-- Preferred system color-->
 
-    <!-- <meta name="color-scheme" content="light dark" /> -->
+    <meta name="color-scheme" content="light dark" />
 
     <!-- Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -55,6 +55,7 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
+
     <!-- Styles -->
     <link rel="stylesheet" href="./css/style.css" />
 
@@ -63,6 +64,7 @@
   </head>
 
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="site-top-bar">
       <div class="site-branding-title">
         <svg
@@ -98,16 +100,21 @@
 
         <a href="./index.html" class="brand-title">WebDev Journal</a>
       </div>
+
       <nav class="nav-bar" aria-label="Primary navigation">
         <ul class="nav-bar-list">
-          <!-- Home page <li><a href="index.html">Home</a></li> -->
-          <li class="nav-links"><a href="./full-article.html">Article</a></li>
-          <li class="nav-links"><a href="./about.html">About</a></li>
+          <li class="nav-links">
+            <a href="./full-article.html">Article</a>
+          </li>
+          <li class="nav-links">
+            <a href="./about.html">About</a>
+          </li>
         </ul>
       </nav>
     </header>
-    <main>
-      <section class="latest-post-section">
+
+    <main id="main-content">
+      <article class="latest-post-section">
         <div class="latest-post-img-wrapper">
           <img
             src="./images/building-website.jpg"
@@ -116,7 +123,7 @@
           />
         </div>
         <div class="latest-post-content">
-          <p class="post-date">July 23, 2024</p>
+          <time class="post-date" datetime="2024-07-23"> July 23, 2024 </time>
           <h1 class="latest-post-title">
             Learning Web Development by Building Real Things
           </h1>
@@ -126,15 +133,16 @@
             development.
           </p>
         </div>
-      </section>
-      <div class="posts-container posts-grid">
+      </article>
+
+      <div id="posts-container" class="posts-container posts-grid">
         <!-- POST 1 -->
-        <section class="posts-sections">
+        <article class="posts-sections">
           <div class="post-img-wrapper">
             <img src="./images/internet.jpg" alt="" class="post-img" />
           </div>
 
-          <p class="post-date">July 23, 2024</p>
+          <time class="post-date" datetime="2024-07-23"> July 23, 2024 </time>
 
           <h2 class="post-title">
             The Evolution of a Web Developer: Understanding the First Steps
@@ -144,15 +152,15 @@
             How most developers first encounter the web and why structural
             thinking matters more than visuals in the early stages.
           </p>
-        </section>
+        </article>
 
         <!-- POST 2 -->
-        <section class="posts-sections">
+        <article class="posts-sections">
           <div class="post-img-wrapper">
             <img src="./images/core-tecnology.jpg" alt="" class="post-img" />
           </div>
 
-          <p class="post-date">August 02, 2024</p>
+          <time class="post-date" datetime="2024-08-02"> August 02, 2024 </time>
 
           <h2 class="post-title">
             Core Technologies: A Technical Analysis of HTML, CSS &amp;
@@ -163,15 +171,15 @@
             A technical breakdown of the three foundational technologies that
             power modern web applications.
           </p>
-        </section>
+        </article>
 
         <!-- POST 3 -->
-        <section class="posts-sections">
+        <article class="posts-sections">
           <div class="post-img-wrapper">
             <img src="./images/full-stack.png" alt="" class="post-img" />
           </div>
 
-          <p class="post-date">August 15, 2024</p>
+          <time class="post-date" datetime="2024-08-15"> August 15, 2024 </time>
 
           <h2 class="post-title">
             Choosing a Specialization: Front‑End, Back‑End, or Full‑Stack
@@ -182,15 +190,17 @@
             An overview of the main web development career paths and the skills
             each one requires.
           </p>
-        </section>
+        </article>
 
         <!-- POST 4 -->
-        <section class="posts-sections">
+        <article class="posts-sections">
           <div class="post-img-wrapper">
             <img src="./images/framework.jpg" alt="" class="post-img" />
           </div>
 
-          <p class="post-date">September 01, 2024</p>
+          <time class="post-date" datetime="2024-09-01">
+            September 01, 2024
+          </time>
 
           <h2 class="post-title">
             Tools, Workflows &amp; Ecosystems: From Git to Deployment Pipelines
@@ -200,15 +210,17 @@
             The essential tools and workflows that support professional web
             development teams.
           </p>
-        </section>
+        </article>
 
         <!-- POST 5 -->
-        <section class="posts-sections">
+        <article class="posts-sections">
           <div class="post-img-wrapper">
             <img src="./images/portfolio.jpg" alt="" class="post-img" />
           </div>
 
-          <p class="post-date">September 18, 2024</p>
+          <time class="post-date" datetime="2024-09-18">
+            September 18, 2024
+          </time>
 
           <h2 class="post-title">
             Building Real‑World Projects: Strategy, Architecture &amp; Portfolio
@@ -219,15 +231,17 @@
             Why production‑ready projects matter and how they shape a strong
             developer portfolio.
           </p>
-        </section>
+        </article>
 
         <!-- POST 6 -->
-        <section class="posts-sections">
+        <article class="posts-sections">
           <div class="post-img-wrapper">
             <img src="./images/interview.jpg" alt="" class="post-img" />
           </div>
 
-          <p class="post-date">October 05, 2024</p>
+          <time class="post-date" datetime="2024-10-05">
+            October 05, 2024
+          </time>
 
           <h2 class="post-title">
             Entering the Industry: Interviews, Professional Growth &amp;
@@ -238,10 +252,19 @@
             What to expect when transitioning from learning to working as a
             professional web developer.
           </p>
-        </section>
+        </article>
       </div>
-      <button type="button" class="load-more-btn">View More</button>
+
+      <button
+        type="button"
+        class="load-more-btn"
+        aria-controls="posts-container"
+        aria-label="Load more blog posts"
+      >
+        View More
+      </button>
     </main>
+
     <footer class="site-footer">
       <strong class="footer-title">WebDev Journal Blog</strong>
 

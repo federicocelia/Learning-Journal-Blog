@@ -60,6 +60,30 @@ h1 {
   font-size: clamp(0.875rem, 3vw, 1.25rem);
 }
 
+/* =====================================================
+   Skip Link (WCAG 2.2 – Bypass Blocks)
+   -----------------------------------------------------
+   Provides a keyboard-accessible way to skip repetitive
+   navigation and jump directly to the main content.
+   - Visible only when focused
+   - Satisfies WCAG 2.4.1 (Bypass Blocks)
+   ===================================================== */
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 /* ==================================================
    Header
    ================================================== */
