@@ -279,3 +279,9 @@ h1 {
     width: 80%;
   }
 }
+
+@media (min-width: 1400px) {
+  .posts-grid {
+    max-width: calc(4 * 309px + 3 * 2.5625rem); /* 4 columns threshold */
+  }
+}
